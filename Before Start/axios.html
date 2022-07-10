@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        axios.get('https://www.zerocho.com/api/get')
+        .then(result => {
+            console.log(result);
+            console.log(result.data);
+        })
+        .catch(err => {
+            console.error(err);
+        });
+
+        // axios 내부에 Promise객체가 들어있기 때문에 async/await방식을 사용하는것도 가능하다
+
+        (async () => {
+            try{
+                const result = await axios.get('https://www.zerocho.com/api/get');
+                console.log(result);
+                console.log(result.data);
+            }catch(err){
+                console.error(err);
+            }
+        })();
+
+        // POST 방식의 Request
+
+        (async () => {
+            try{
+                const result = await axios.post('https://www.zerocho.com/api/post/json',{
+                    name:'zerocho',
+                    birth:1994,
+                });
+                console.log(result);
+                console.log(result.data);
+            }catch(err){
+                console.error(err);
+            }
+        })();
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
