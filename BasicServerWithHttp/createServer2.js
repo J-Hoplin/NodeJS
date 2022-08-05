@@ -22,4 +22,7 @@ server.on('listening', () => {
 server.on('error', (err) => {
     console.error(err)
 })
-
+/**
+ * 당연한 사실이지만, 서버의 소스코드가 변경되면, 종료했다가 다시 실행해야한다
+ * 
+ */
