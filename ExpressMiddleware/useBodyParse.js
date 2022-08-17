@@ -17,7 +17,7 @@ if(process.env.NODE_ENV === 'dev'){
 app.use('/',experss.static(path.join(__dirname,'public')))
 
 /**
- * body-parser : 본문에 있는 데이터를 해석해서 req.body객체로 만들어주는 미들웨어이다.
+ * body-parser : 본문에 있는 data field를 해석해서 req.body객체로 만들어주는 미들웨어이다.(결국 POST요청에 대해서를 말한다.)
  * 
  * 보통 form이나 AJAX 요청에 대해서 데이터를 처리한다. 단 이미지 동영상 같은 멀티파트 데이터는 처리하지 못한다.
  * 멀티파트 데이터는 multer라는것을 이용해서 처리한다.
@@ -57,6 +57,7 @@ app.get('/jsondata', (req,res) => {
 
 app.post('/jsondata',(req,res) => {
     console.log(req.body)
+    console.log(req.query)
     res.redirect('/')
 })
 
