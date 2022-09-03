@@ -1,0 +1,17 @@
+{
+  "name": "eslint_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "eslint": "eslint $1",
+    "eslint-fix" : "eslint $1 --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.23.0",
+    "eslint-config-google": "^0.14.0"
+  }
+}
