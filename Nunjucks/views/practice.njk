@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}} - {{subtitle}}</title>
+</head>
+<body>
+    {% set node = 'Node.js' %}
+    {% set js = 'JavaScript' %}
+    <p>{{node}}와 {{js}}</p>
+
+    <ul>
+        {% set fruits = ['a','b','c','d','e'] %}
+        {% for item in fruits %}
+        <!-- loop.index를 사용해서 반복문 인덱스를 사용할 수 있다. -->
+        <li>{{loop.index}}번째 {{item}}</li>
+        {% endfor %}
+        
+        {% set isLoggedIn = true %}
+        {% if isLoggedIn %}
+        <div>로그인 되었습니다</div>
+        {% else %}
+        <div>로그인이 필요합니다</div>
+        {% endif %}
+
+        {% set options = 'a' %}
+        {% if options === 'a' %}
+        <div>option a</div>
+        {% elif options === 'b' %}
+        <div>option b</div>
+        {% elif options === 'c' %}
+        <div>option c</div>
+        {% elif options === 'd' %}
+        <div>option d</div>
+        {% else %}
+        <div>nothing</div>
+        {% endif %}
+
+        {{'ok' if isLoggedIn}}
+        {{'ok2' if isLoggedIn else 'no'}}
+    </ul>
+</body>
+</html>

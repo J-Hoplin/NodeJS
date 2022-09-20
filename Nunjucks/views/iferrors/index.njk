@@ -1,0 +1,12 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+    <h1>{{title}}</h1>
+    <p>Welcome to {{title}}</p>
+
+    {% if isloggedIn %}
+        <p>User {{username}} logged in</p>
+    {% else %}
+        <p>Log in required</p>
+    {% endif %}
+{% endblock %}

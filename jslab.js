@@ -1,8 +1,6 @@
-const dotenv = require('dotenv')
-const path = require('path')
+const a = 1
+const b = 2
 
-dotenv.config({
-    path: path.join(__dirname, "sequelize_practice/.env")
-})
-
-console.log(process.env.NODE_ENV)
+a === 1 || a === 0
+? console.log('t')
+:console.log('y')
