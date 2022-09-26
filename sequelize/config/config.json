@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "hoplinsql123!",
-    "database": "sys",
+    "database": "nodejs",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

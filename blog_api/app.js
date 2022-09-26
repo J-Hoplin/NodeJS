@@ -11,7 +11,9 @@ process.env.ENV === "dev"
 ? app.use(morgan('dev'))
 : app.use(morgan('combined'))
 
-app.use(express.json())
+app.use(
+    express.json(),
+)
 
 app.listen(app.get('port'), () => {
     console.log(`Listening on port ${app.get('port')}`)
